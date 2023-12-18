@@ -1,0 +1,38 @@
+set term pdf
+set size square
+set view map
+
+set out "population.pdf"
+
+set cbrange [0.0:64.0]
+set palette defined (0 'black', 4 'red', 64 'yellow')
+
+do for [i=0:63] {
+
+    eval sprintf("set title \'Turn %i\'", i*4)
+    splot[-0.5:31.5][-0.5:31.5][0:64] 'population.tsv' matrix nonuniform index i*2*4 with image notitle
+}
+
+
+set out "nation.pdf"
+
+
+set cbrange [-32.0:32.0]
+set palette defined ( -32 'yellow', -4 'red', 0 'black', 4 'blue', 32 'cyan')
+
+do for [i=0:63] {
+
+    eval sprintf("set title \'Turn %i\'", i*4)
+    splot[-0.5:31.5][-0.5:31.5][-64:64] 'population.tsv' matrix nonuniform index i*2*4+1 with image notitle
+}
+
+
+set term pdf
+
+set out "demographic.pdf"
+
+set xlabel "turn"
+set ylabel "population"
+
+plot "demographics.tsv" using 1:2 with lines  title"Good blobs",\
+"demographics.tsv" using 1:3 with lines  title"Bad blobs"

@@ -1,0 +1,3 @@
+bin/blobs_linux
+obj/*.o
+

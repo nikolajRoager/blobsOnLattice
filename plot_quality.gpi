@@ -1,0 +1,132 @@
+set terminal pdf size 9,6;
+#set size square
+set key bmargin
+set view map
+
+#set title 'Eigenstate |000001>'
+
+#set lmargin at screen 0.01;
+#set rmargin at screen 0.99;
+#set bmargin at screen 0.01;
+#set tmargin at screen 0.99;
+
+
+set title font "Helvetica,20"
+set xtic font "Helvetica,20"
+set ytic font "Helvetica,20"
+set ylabel font "Helvetica,20"
+set xlabel font "Helvetica,20"
+set cblabel font "Helvetica,20"
+
+
+set xlabel 'x lattice site' offset 0,-1
+set ylabel 'y lattice site' offset -3,0
+
+set cblabel 'Charge'
+
+
+
+#We want to use the same range for all plots, and i KNOW that nothing is outside this range (is normalized wavefunction squared)
+set cbrange [-0.25:0.25]
+set palette defined ( -0.25 'cyan', -0.125 'blue', 0 'black', 0.125 'red', 0.25 'yellow')
+
+set xtics format ''
+set ytics ("5" 0,"4" 1,"3" 2,"2" 3,"1" 4,"0" 5)
+
+set xtics ("8" 8,"7" 7,"6" 6,"5" 5,"4" 4,"3" 3,"2" 2,"1" 1,"0" 0)
+
+#unset colorbox
+#unset xlabel
+#unset ylabel
+
+set output 'q9k0.pdf'
+set title 'keystate 0'
+splot 'q9k.tsv' matrix nonuniform index 1 with pm3d notitle
+set output 'q9k1.pdf'
+set title 'keystate 1'
+splot 'q9k.tsv' matrix nonuniform index 2 with pm3d notitle
+set output 'q9k2.pdf'
+set title 'keystate 2'
+splot 'q9k.tsv' matrix nonuniform index 3 with pm3d notitle
+set output 'q9k3.pdf'
+set title 'keystate 3'
+splot 'q9k.tsv' matrix nonuniform index 4 with pm3d notitle
+set output 'q9k4.pdf'
+set title 'keystate 4'
+splot 'q9k.tsv' matrix nonuniform index 5 with pm3d notitle
+set output 'q9k5.pdf'
+set title 'keystate 5'
+splot 'q9k.tsv' matrix nonuniform index 6 with pm3d notitle
+set output 'q9k6.pdf'
+set title 'keystate 6'
+splot 'q9k.tsv' matrix nonuniform index 7 with pm3d notitle
+set output 'q9k7.pdf'
+set title 'keystate 7'
+splot 'q9k.tsv' matrix nonuniform index 8 with pm3d notitle
+set output 'q9k8.pdf'
+set title 'keystate 8'
+splot 'q9k.tsv' matrix nonuniform index 9 with pm3d notitle
+set output 'q9k9.pdf'
+set title 'keystate 9'
+splot 'q9k.tsv' matrix nonuniform index 10 with pm3d notitle
+set output 'q9k10.pdf'
+set title 'keystate 10'
+splot 'q9k.tsv' matrix nonuniform index 11 with pm3d notitle
+set output 'q9k11.pdf'
+set title 'keystate 11'
+splot 'q9k.tsv' matrix nonuniform index 12 with pm3d notitle
+set output 'q9k12.pdf'
+set title 'keystate 12'
+splot 'q9k.tsv' matrix nonuniform index 13 with pm3d notitle
+set output 'q9k13.pdf'
+set title 'keystate 13'
+splot 'q9k.tsv' matrix nonuniform index 14 with pm3d notitle
+set output 'q9k14.pdf'
+set title 'keystate 14'
+splot 'q9k.tsv' matrix nonuniform index 15 with pm3d notitle
+
+set output 'q9k15.pdf'
+set title 'keystate 15'
+splot 'q9k.tsv' matrix nonuniform index 16 with pm3d notitle
+set output 'q9k16.pdf'
+set title 'keystate 16'
+splot 'q9k.tsv' matrix nonuniform index 17 with pm3d notitle
+set output 'q9k17.pdf'
+set title 'keystate 17'
+splot 'q9k.tsv' matrix nonuniform index 18 with pm3d notitle
+set output 'q9k18.pdf'
+set title 'keystate 18'
+splot 'q9k.tsv' matrix nonuniform index 19 with pm3d notitle
+set output 'q9k19.pdf'
+set title 'keystate 19'
+splot 'q9k.tsv' matrix nonuniform index 20 with pm3d notitle
+set output 'q9k20.pdf'
+set title 'keystate 20'
+splot 'q9k.tsv' matrix nonuniform index 21 with pm3d notitle
+set output 'q9k21.pdf'
+set title 'keystate 21'
+splot 'q9k.tsv' matrix nonuniform index 22 with pm3d notitle
+set output 'q9k22.pdf'
+set title 'keystate 22'
+splot 'q9k.tsv' matrix nonuniform index 23 with pm3d notitle
+set output 'q9k23.pdf'
+set title 'keystate 23'
+splot 'q9k.tsv' matrix nonuniform index 24 with pm3d notitle
+set output 'q9k24.pdf'
+set title 'keystate 24'
+splot 'q9k.tsv' matrix nonuniform index 25 with pm3d notitle
+set output 'q9k25.pdf'
+set title 'keystate 25'
+splot 'q9k.tsv' matrix nonuniform index 26 with pm3d notitle
+set output 'q9k26.pdf'
+set title 'keystate 26'
+splot 'q9k.tsv' matrix nonuniform index 27 with pm3d notitle
+set output 'q9k27.pdf'
+set title 'keystate 27'
+splot 'q9k.tsv' matrix nonuniform index 28 with pm3d notitle
+set output 'q9k28.pdf'
+set title 'keystate 28'
+splot 'q9k.tsv' matrix nonuniform index 29 with pm3d notitle
+set output 'q9k29.pdf'
+set title 'keystate 29'
+splot 'q9k.tsv' matrix nonuniform index 30 with pm3d notitle
